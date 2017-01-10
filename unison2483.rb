@@ -4,7 +4,7 @@ class Unison2483 < Formula
   url "https://www.seas.upenn.edu/~bcpierce/unison//download/releases/unison-2.48.3/unison-2.48.3.tar.gz"
   sha256 "f40d3cfbe82078d79328b51acab3e5179f844135260c2f4710525b9b45b15483"
 
-  depends_on "ocaml" => :build
+  depends_on "opam" => :build
 
   def install
     ENV.deparallelize  # if your formula fails when building in parallel
