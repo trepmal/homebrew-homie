@@ -19,7 +19,7 @@ class Unison2483 < Formula
     # system "cmake", ".", *std_cmake_args
 #    system "make", "install" # if this fails, try separate make/make install steps
 #    system "make", "install" # if this fails, try separate make/make install steps
-    system "make"
+    system "make ./mkProjectInfo"
   end
 
 #  test do
