@@ -22,7 +22,7 @@ class Unison2483 < Formula
     bin.install "unison"
   end
 
-  test do
-    assert_match version.to_s, shell_output("#{bin}/unison -version")
-  end
+#  test do
+#    assert_match version.to_s, shell_output("#{bin}/unison -version")
+#  end
 end
