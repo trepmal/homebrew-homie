@@ -1,4 +1,4 @@
-class Unison2483 < Formula
+class unison2483 < Formula
   desc "File synchronization tool for OSX"
   homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
   url "https://www.seas.upenn.edu/~bcpierce/unison//download/releases/unison-2.48.3/unison-2.48.3.tar.gz"
@@ -14,11 +14,11 @@ class Unison2483 < Formula
   depends_on "ocaml" => :build
 
   def install
-    ENV.j1
+    ENV.deparallelize
     ENV.delete "CFLAGS" # ocamlopt reads CFLAGS but doesn't understand common options
     ENV.delete "NAME" # https://github.com/Homebrew/homebrew/issues/28642
-    system "make ./mkProjectInfo"
-    system "make UISTYLE=text"
+    system "make", "./mkProjectInfo"
+    system "make", "UISTYLE=text"
     bin.install "unison"
   end
 
