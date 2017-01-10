@@ -14,11 +14,11 @@ class Unison2483 < Formula
   depends_on "ocaml" => :build
 
   def install
-    ENV.deparallelize
+    ENV.j1
     ENV.delete "CFLAGS" # ocamlopt reads CFLAGS but doesn't understand common options
     ENV.delete "NAME" # https://github.com/Homebrew/homebrew/issues/28642
-    system "make", "./mkProjectInfo"
-    system "make", "UISTYLE=text"
+    system "make ./mkProjectInfo"
+    system "make UISTYLE=text"
     bin.install "unison"
   end
 
