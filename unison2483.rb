@@ -17,6 +17,7 @@ class Unison2483 < Formula
     ENV.deparallelize
     ENV.delete "CFLAGS" # ocamlopt reads CFLAGS but doesn't understand common options
     ENV.delete "NAME" # https://github.com/Homebrew/homebrew/issues/28642
+    system "ocaml -version"
     system "make", "./mkProjectInfo"
     system "make", "UISTYLE=text"
     bin.install "unison"
